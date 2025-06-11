@@ -14,7 +14,7 @@ export const ItemBar = () => {
     },
     {
       id: 4,
-      title: "Línea de tiempo",
+      title: "Experiencia",
     },
     {
       id: 5,
