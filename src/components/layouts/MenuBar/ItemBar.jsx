@@ -2,15 +2,15 @@ export const ItemBar = () => {
   let menuitems = [
     {
       id: 1,
-      title: "Home",
+      title: "Inicio",
     },
     {
       id: 2,
-      title: "Sobre Mí",
+      title: "Mis Proyectos",
     },
     {
       id: 3,
-      title: "Mis Proyectos",
+      title: "Sobre Mí",
     },
     {
       id: 4,
@@ -28,10 +28,10 @@ export const ItemBar = () => {
 
   return (
     <>
-      {menuitems.map((item) => {
+      {menuitems.map(({id, title} = item) => {
         return (
-          <li key={item.id} className="border bg-[#4B4952]  text-white rounded-lg p-2 flex-gap w-[140px] text-center hover:bg-[#fff] hover:text-black hover:border transition duration-300 ease-in-out">
-            <a href="" className="">{item.title}</a>
+          <li key={id} className="border bg-[#4B4952]  text-white rounded-lg p-2 flex-gap w-[140px] text-center hover:bg-[#fff] hover:text-black hover:border transition duration-300 ease-in-out">
+            <a href={`#${title}`} className="">{title}</a>
           </li>
         );
       })}
