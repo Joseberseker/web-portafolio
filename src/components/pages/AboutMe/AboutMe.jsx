@@ -62,8 +62,8 @@ export const AboutMe = () => {
       className="flex items-center justify-center min-h-screen"
       id="Sobre Mí"
     >
-      <div className="max-w-screen-lg">
-        <h2 className="text-2xl font-bold">
+      <div className="w-2/4 p-9">
+        <h2 className="text-2xl font-bold mb-4">
           Acerca de <span>Mi</span>
         </h2>
         <h3></h3>
@@ -78,15 +78,16 @@ export const AboutMe = () => {
           equipos creativos y enfrentar desafios que me permitan crecer
           profesionalmente y aprender nuevas tecnologías.
         </p>
-        <div className="skills">
-          <h3>Habilidades</h3>
-          <div className="content-skills flex flex gap-3 justify-between">
+        <div className="skills w-auto">
+          <h3 className="mb-4">Habilidades</h3>
+          <div className="content-skills grid grid-cols-5 gap-3 ">
             {skillitems.map(({ id, title, logo } = skillitems) => {
               return (
-                <div className="">
-                  <div className="item-skill flex flex-col rounded p-2 bg-gray-300">
+                <div className="text-center">
+                  <div className="item-skill flex-col rounded p-2 bg-gray-300 ">
                     {/* <span>{title}</span> */}
-                    <i title={title} className={`${logo} text-6xl`}></i>
+                    <i title={title} className={`${logo} text-5xl`}></i>
+                    <p className="text-center font-bold">{title}</p>
                   </div>
                 </div>
               );
@@ -96,7 +97,7 @@ export const AboutMe = () => {
       </div>
       <div>
         <img
-          className="h-auto max-w-full rounded-full bg-gray-300"
+          className="h-auto w-3/4 rounded-full bg-gray-300"
           src={profileImage}
           alt="Foto de perfil profesional de Jose Ahumada"
         />
