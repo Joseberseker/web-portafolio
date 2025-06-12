@@ -3,6 +3,7 @@ import { AboutMe } from "./components/pages/AboutMe/AboutMe";
 import { Header } from "./components/pages/Header/Header";
 import { Hero } from "./components/pages/Hero/Hero";
 import { Proyectos } from "./components/pages/Proyectos/Proyectos";
+import { TimeLine } from "./components/pages/TimeLine/TimeLine";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Proyectos/>
       <AboutMe/>
+      <TimeLine/>
     </div>
   );
 }
