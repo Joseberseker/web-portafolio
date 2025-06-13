@@ -21,17 +21,22 @@ export const ItemBar = () => {
     //   title: "Servicios",
     // },
     {
-      id: 6,
+      id: 5,
       title: "Contacto",
     },
   ];
 
   return (
     <>
-      {menuitems.map(({id, title} = item) => {
+      {menuitems.map(({ id, title } = item) => {
         return (
-          <li key={id} className="border bg-[#4B4952]  text-white rounded-lg p-2 flex-gap w-[140px] text-center hover:bg-[#fff] hover:text-black hover:border transition duration-300 ease-in-out">
-            <a href={`#${title}`} className="">{title}</a>
+          <li key={id} className="">
+            <a
+              href={`#${title}`}
+              className="border bg-[#4B4952]  text-white rounded-lg p-2 justify-center hover:bg-[#fff] hover:text-black hover:border transition duration-300 ease-in-out cursor-pointer flex lg:w-[150px] w-full"
+            >
+              {title}
+            </a>
           </li>
         );
       })}

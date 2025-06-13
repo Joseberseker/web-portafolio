@@ -60,7 +60,7 @@ export const CardTimeLine = () => {
           {timelineitems.map(
             ({ position, company, year, cycle, desc, id } = timelineitems) => {
               return (
-                <div >
+                <div key={id} >
                   <div className="timeline-start mb-5 md:mb-5 pb-2" >
                     <p className="text-lg font-black">{position}</p>
                     <h2 className="font-mono italic font-bold">{company}</h2>
