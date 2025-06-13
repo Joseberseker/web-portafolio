@@ -1,5 +1,6 @@
 import "./App.css";
 import { AboutMe } from "./components/pages/AboutMe/AboutMe";
+import { Contact } from "./components/pages/Contact/Contact";
 import { Header } from "./components/pages/Header/Header";
 import { Hero } from "./components/pages/Hero/Hero";
 import { Proyectos } from "./components/pages/Proyectos/Proyectos";
@@ -14,6 +15,7 @@ function App() {
       <Proyectos/>
       <AboutMe/>
       <TimeLine/>
+      <Contact/>
     </div>
   );
 }

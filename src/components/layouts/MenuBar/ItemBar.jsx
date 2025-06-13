@@ -16,10 +16,10 @@ export const ItemBar = () => {
       id: 4,
       title: "Experiencia",
     },
-    {
-      id: 5,
-      title: "Servicios",
-    },
+    // {
+    //   id: 5,
+    //   title: "Servicios",
+    // },
     {
       id: 6,
       title: "Contacto",
