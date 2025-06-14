@@ -28,12 +28,13 @@ export const ItemBar = () => {
 
   return (
     <>
-      {menuitems.map(({ id, title } = item) => {
+      {menuitems.map((item) => {
+        const { id, title } = item
         return (
           <li key={id} className="">
             <a
               href={`#${title}`}
-              className="border bg-[#4B4952]  text-white rounded-lg p-2 justify-center hover:bg-[#fff] hover:text-black hover:border transition duration-300 ease-in-out cursor-pointer flex lg:w-[150px] w-full"
+              className="border bg-[#4B4952]  text-white rounded-lg p-2 justify-center hover:bg-[#fff] hover:text-black hover:border transition duration-300 ease-in-out flex lg:w-[150px] w-full"
             >
               {title}
             </a>
