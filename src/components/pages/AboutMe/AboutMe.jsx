@@ -91,15 +91,7 @@ export const AboutMe = () => {
         </h2>
         <h3></h3>
         <p className="">
-          Con una pasión innata por el diseño y la tecnología, me especializao
-          en crear experiencias web intuitivas y atractivas. A lo largo de mi
-          carrera, he desarrollado habilidades sólidas en HTML, CSS y
-          JavaScript, así como en frameworks modernos como React y Angular. Mi
-          objetivo es siempre mejhorar la usabilidad de las aplicaciones web,
-          garantizando que cada proyecto no solo sea visualmente impactante,
-          sino también funcional y fácil de usar. Me encanta colaborar con
-          equipos creativos y enfrentar desafios que me permitan crecer
-          profesionalmente y aprender nuevas tecnologías.
+          Con una pasión innata por el diseño y la tecnología, me especializo en crear experiencias web intuitivas y atractivas. A lo largo de mi carrera, he desarrollado habilidades sólidas en HTML, CSS y  JavaScript, así como en frameworks modernos como React y Angular. Mi objetivo es siempre mejorar la usabilidad de las aplicaciones web, garantizando que cada proyecto no solo sea visualmente impactante, sino también funcional y fácil de usar. Me encanta colaborar con equipos creativos y enfrentar desafios que me permitan crecer profesionalmente y aprender nuevas tecnologías.
         </p>
         <div className="skills w-auto">
           <h3 className="mb-4">Habilidades</h3>

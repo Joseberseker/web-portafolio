@@ -43,7 +43,7 @@ export const Contact = () => {
       className="flex items-center justify-center min-h-screen bg-white dark:bg-gray-900"
       id="Contacto"
     >
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <div className="py-8 lg:py-16 px-7 lg:px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
           Contactame
         </h2>

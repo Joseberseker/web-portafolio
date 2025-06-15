@@ -45,22 +45,10 @@ export const CardTimeLine = () => {
     <div className="container">
       <li>
         <div className="timeline-middle">
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="h-5 w-5"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-              clipRule="evenodd"
-            />
-          </svg> */}
           {timelineitems.map(
             ({ position, company, year, cycle, desc, id } = timelineitems) => {
               return (
-                <div key={id} >
+                <div key={id}>
                   <div className="timeline-start mb-5 md:mb-5 pb-2" >
                     <p className="text-lg font-black">{position}</p>
                     <h2 className="font-mono italic font-bold">{company}</h2>
@@ -68,20 +56,6 @@ export const CardTimeLine = () => {
                     <br />
                     {desc}
                   </div>
-                  {/* <div className="timeline-middle">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-5 w-5"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div> */}
                   <hr />
                 </div>
               );

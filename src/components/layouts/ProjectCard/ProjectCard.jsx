@@ -122,17 +122,16 @@ export const ProjectCard = () => {
     <>
       {projectItems.map((projectItems) => {
         const { id, name, link_imagen, link_github, link_demo } = projectItems;
-        projectItems;
         return (
           <div className="lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white mb-5">
             <img
-              className="rounded-t-lg h-52 w-full"
+              className="rounded-t-lg lg:h-52 w-full"
               src={link_imagen}
               alt={name}
             />
 
             <div className="p-5">
-              <h4 className="mb-2 text-[23px] font-bold ">{name}</h4>
+              <h4 className="mb-2 text-lg lg:text-[23px] font-bold ">{name}</h4>
               <div>
                 <h6>Tecnologías usadas</h6>
                 <div className="text-xl flex gap-2 my-2">
