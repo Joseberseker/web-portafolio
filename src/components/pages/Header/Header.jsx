@@ -3,7 +3,7 @@ import { ItemBar } from "../../layouts/MenuBar/ItemBar";
 export const Header = () => {
   return (
     // <header className="fixed top-0 left-0 right-0 <-50 w-full py-4">
-    <header className="fixed lg:fixed top-0 left-0 right-0 w-full py-4 lg:mb-15">
+    <header className="fixed lg:fixed top-0 left-0 right-0 w-full py-4 lg:mb-15 z-50">
       {/* <nav className="flex flex-row gap-2"> */}
       <nav className="pt-2">
         {/* <h1 className="text-[#4B4952] text-2xl font-bold">Jose Ahumada </h1> */}

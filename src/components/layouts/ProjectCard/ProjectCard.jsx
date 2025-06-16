@@ -25,6 +25,7 @@ export const ProjectCard = () => {
           logo: "bx bxl-javascript",
         },
       ],
+      desc: "Resuelve operaciones financieras relacionadas a las anualidades",
       link_github: "https://github.com/Joseberseker/calculadora-financiera",
       link_demo: "https://steady-pasca-3d8f9e.netlify.app/",
       link_imagen: calculadora_financiera,
@@ -54,6 +55,7 @@ export const ProjectCard = () => {
           logo: "bx bxl-react",
         },
       ],
+      desc: "Maquetado web de presentación de servicios de una empresa",
       link_github:
         "https://github.com/Joseberseker/maquetado-seccion-servicios",
       link_demo: "https://featuresectioncard.netlify.app/",
@@ -79,6 +81,7 @@ export const ProjectCard = () => {
           logo: "bx bxl-javascript",
         },
       ],
+      desc: "Web que encripta y desencripta mensajes",
       link_github: "https://github.com/Joseberseker/encriptador-texto",
       link_demo: "https://joseberseker.github.io/encriptador-texto/",
       link_imagen: encriptador_texto,
@@ -108,6 +111,7 @@ export const ProjectCard = () => {
           logo: "bx bxl-react",
         },
       ],
+      desc: "Maquetado web de perfil de seguidores",
       link_github: "https://github.com/Joseberseker/profile-card-component",
       link_demo: "https://profile-card-component-jose-ahumada.netlify.app/",
       link_imagen: tarjeta_perfil,
@@ -116,14 +120,20 @@ export const ProjectCard = () => {
   return (
     <>
       {projectItems.map((projectItems) => {
-        const { id, name, link_imagen, link_github, link_demo } = projectItems;
+        const { id, name, link_imagen, link_github, link_demo, desc } = projectItems;
         return (
-          <div className="lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white mb-5" key={id}>
-            <img
-              className="rounded-t-lg h-52 w-full"
-              src={link_imagen}
-              alt={name}
-            />
+          <div
+            className="lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white mb-5"
+            key={id}
+          >
+            <div className="relative group overflow-hidden shadow-lg rounded-lg">
+              <img
+                className="rounded-t-lg h-52 w-full group-hover-brightness-75 transition duration-300"
+                src={link_imagen}
+                alt={name}
+              />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-50 text-white text-center p-4 "><p>{desc}</p></div>
+            </div>
 
             <div className="p-5">
               <h4 className="mb-2 text-lg lg:text-[23px] font-bold ">{name}</h4>

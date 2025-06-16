@@ -8,29 +8,29 @@ export const ItemBar = () => {
     {
       id: 2,
       title: "Mis Proyectos",
-      logo: "💼"
+      logo: "💼",
     },
     {
       id: 3,
       title: "Sobre Mí",
-      logo: "😎"
+      logo: "😎",
     },
     {
       id: 4,
       title: "Experiencia",
-      logo: "🎮"
+      logo: "🎮",
     },
     {
       id: 5,
       title: "Contacto",
-      logo: "📒"
+      logo: "📒",
     },
   ];
 
   return (
     <>
       {menuitems.map((item) => {
-        const { id, title, logo } = item
+        const { id, title, logo } = item;
         return (
           <li key={id} className="">
             <a
