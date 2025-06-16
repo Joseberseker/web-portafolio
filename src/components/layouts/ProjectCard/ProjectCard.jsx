@@ -78,11 +78,6 @@ export const ProjectCard = () => {
           name: "JAVASCRIPT",
           logo: "bx bxl-javascript",
         },
-        {
-          id: 3.4,
-          name: "REACT",
-          logo: "bx bxl-react",
-        },
       ],
       link_github: "https://github.com/Joseberseker/encriptador-texto",
       link_demo: "https://joseberseker.github.io/encriptador-texto/",
@@ -123,9 +118,9 @@ export const ProjectCard = () => {
       {projectItems.map((projectItems) => {
         const { id, name, link_imagen, link_github, link_demo } = projectItems;
         return (
-          <div className="lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white mb-5">
+          <div className="lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white mb-5" key={id}>
             <img
-              className="rounded-t-lg lg:h-52 w-full"
+              className="rounded-t-lg h-52 w-full"
               src={link_imagen}
               alt={name}
             />

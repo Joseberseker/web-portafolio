@@ -5,7 +5,7 @@ export const TimeLine = () => {
     <section id="Experiencia" className="flex items-center justify-center min-h-screen flex-col mx-9 lg:mx-30 lg:mt-10">
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical text-[15px] lx:w-6/12">
       <h2 className="text-2xl font-bold mt-10">
-        Experiencia <span>Laboral</span> (+1 año)
+        Experiencia <span>Laboral</span>
       </h2>
         <CardTimeLine />
       </ul>
