@@ -1,4 +1,6 @@
 import profileImage from "../../../assets/profile-image.png";
+import { FiUser } from "react-icons/fi";
+
 export const AboutMe = () => {
   let skillitems = [
     {
@@ -86,10 +88,10 @@ export const AboutMe = () => {
       id="Sobre Mí"
     >
       <div className="lg:w-2/4 p-9">
-        <h2 className="text-2xl font-bold mb-4">
-          Acerca de <span>Mi</span>
+        <h2 className="flex items-center gap-2 text-3xl font-bold text-gray-800 mb-10">
+          <FiUser className="w-8 h-8 text-gray-500" />
+          Sobre mí
         </h2>
-        <h3></h3>
         <p className="">
           Con una pasión innata por el diseño y la tecnología, me especializo en crear experiencias web intuitivas y atractivas. A lo largo de mi carrera, he desarrollado habilidades sólidas en HTML, CSS y  JavaScript, así como en librerías modernas como React. Mi objetivo es siempre mejorar la usabilidad de las aplicaciones web, garantizando que cada proyecto no solo sea visualmente impactante, sino también funcional y fácil de usar. Me encanta colaborar con equipos creativos y enfrentar desafios que me permitan crecer profesionalmente y aprender nuevas tecnologías.
         </p>

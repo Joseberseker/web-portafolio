@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FiPhone } from "react-icons/fi"; // <-- Importa el icono
 
 export const Contact = () => {
   const [form, setForm] = useState({
@@ -44,11 +45,12 @@ export const Contact = () => {
       id="Contacto"
     >
       <div className="py-8 lg:py-16 px-7 lg:px-4 mx-auto max-w-screen-md">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-          Contactame
+        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white flex items-center justify-center gap-2">
+          <FiPhone className="w-8 h-8 text-gray-500" /> {/* Icono de teléfono */}
+          Contacto
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-          Tienes alguna duda? Envia un correito y cuadramos una reunión
+          ¿Tienes alguna duda? Envia un correito y cuadramos una reunión
         </p>
         <form onSubmit={handleSubmit} className="space-y-8">
           <div>

@@ -1,68 +1,64 @@
 export const CardTimeLine = () => {
-  let timelineitems = [
+  const timelineitems = [
     {
       id: 1,
       position: "Ingeniero de datos Junior",
       company: "ISES Soluciones Especializadas",
-      desc: "Un profesional de la automatización y los datos es responsable de diseñar, desarrollar y mantener bots de automatización para la gestión documental y la interacción web, así como de automatizar procesos ETL (Extracción, Transformación y Carga) para asegurar la integridad y seguridad de los datos. También brinda soporte a bots en AWS/Azure (Windows) y aplica metodologías ágiles en la gestión de proyectos. Además, apoya al equipo de desarrollo en la documentación de requisitos, participa en el desarrollo de sistemas y ofrece soporte técnico para análisis de datos, IA y automatización. Finalmente, se encarga de la depuración de código y se mantiene al día con las tendencias tecnológicas.",
-      year: "2024-2025",
-      cycle: "Octubre 2024 - Enero 2025",
-      city: "Barranquilla - Atlántico",
+      desc: "Automatización de procesos ETL, soporte a bots en la nube y análisis de datos.",
+      cycle: "Oct 2024 - Ene 2025",
+      city: "Barranquilla",
       location: "Presencial",
     },
     {
       id: 2,
-      position: "Devops Trainee – Prácticas profesionales",
+      position: "Devops Trainee",
       company: "Omipro S.A.S",
-      desc: "En el Laboratorio de Investigación Tecnológico - ID TOLÚ, me encargué de la instalación y configuración de herramientas de monitoreo como Prometheus, Grafana, Netbox, Zabbix y OpenStack. Desplegué estas herramientas en máquinas virtuales de AWS EC2, Google Compute Engine y Microsoft Azure. Mi trabajo también incluyó la configuración detallada de CentOS 7, lo que implicó actualizar paquetes, ajustar firewalls y redes, e instalar NodeExporter para asegurar que las métricas de las máquinas virtuales se visualizaran correctamente en los dashboards de Grafana.",
-      year: "2022",
-      cycle: "Agosto 2022 - Noviembre 2022",
-      city: "Santiago de Tolú - Sucre",
+      desc: "Instalación y monitoreo de infraestructuras en AWS, GCP y Azure.",
+      cycle: "Ago 2022 - Nov 2022",
+      city: "Tolú",
       location: "Remoto",
     },
     {
       id: 3,
-      position: "Bootcamp Trainee Adobe Magento 2",
+      position: "Bootcamp Trainee Magento 2",
       company: "OmniPro S.A.S",
-      desc: "Participé en talleres donde aprendí a manejar Adobe Magento 2 para el desarrollo de E-commerce. En ellos, adquirí experiencia en la creación de módulos utilizando inyección de dependencias, la aplicación de estilos visuales a tiendas online con LESS, el desarrollo de UIComponents tanto para el frontend como para el backend, y la creación de paneles de administración para la gestión de catálogos de productos. También desarrollé habilidades en la creación de parches para la corrección de errores.",
-      year: "2022",
-      cycle: "Mayo 2022 - Julio 2022",
-      city: "Medellín - Antioquia",
+      desc: "Desarrollo de módulos y paneles para E-commerce con Magento 2.",
+      cycle: "May 2022 - Jul 2022",
+      city: "Medellín",
       location: "Remoto",
     },
     {
       id: 4,
       position: "Apoyo de Sistemas Sisbén IV",
       company: "Alcaldía Municipal",
-      desc: "Administré la Plataforma de Sisbén IV, donde me encargué de crear los roles para los diferentes usuarios y cargar los datos recopilados por los censistas a la aplicación web. Mi rol también incluyó la solución de incidencias técnicas y el manejo de herramientas de ofimática, además de apoyar a la administración del Sisbén en diversas tareas de oficina.",
-      year: "2019",
-      cycle: "Junio 2019 - Julio 2019",
-      city: "San Pedro - Sucre",
+      desc: "Gestión de usuarios y soporte técnico en plataforma Sisbén IV.",
+      cycle: "Jun 2019 - Jul 2019",
+      city: "San Pedro",
       location: "Presencial",
     },
   ];
+
   return (
-    <div className="container">
-      <li>
-        <div className="timeline-middle">
-          {timelineitems.map(
-            ({ position, company, year, cycle, desc, id } = timelineitems) => {
-              return (
-                <div key={id}>
-                  <div className="timeline-start mb-5 md:mb-5 pb-2" >
-                    <p className="text-lg font-black">{position}</p>
-                    <h2 className="font-mono italic font-bold">{company}</h2>
-                    <time className="font-mono italic font-bold">{cycle}</time>
-                    <br />
-                    {desc}
-                  </div>
-                  <hr />
-                </div>
-              );
-            }
-          )}
-        </div>
-      </li>
-    </div>
+    <ul className="relative border-l-4 border-black-500 pl-6">
+      {timelineitems.map(
+        (
+          { id, position, company, desc, cycle, city, location },
+          idx
+        ) => (
+          <li key={id} className="mb-12 last:mb-0 relative">
+            {/* Punto del timeline */}
+            <span className="absolute -left-2 top-2 w-4 h-4 bg-gray-500 rounded-full border-4 border-white"></span>
+            <div className="bg-white p-4 rounded-md shadow-sm">
+              <h3 className="text-gray-600 font-bold text-lg">{position}</h3>
+              <span className="text-gray-700 font-semibold">{company}</span>
+              <div className="text-gray-500 text-sm mb-1">
+                {cycle} · {city} · {location}
+              </div>
+              <p className="text-gray-700">{desc}</p>
+            </div>
+          </li>
+        )
+      )}
+    </ul>
   );
 };
