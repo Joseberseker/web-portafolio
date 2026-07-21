@@ -1,6 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FiPhone } from "react-icons/fi"; // <-- Importa el icono
+import { motion } from "framer-motion";
 
 export const Contact = () => {
   const [form, setForm] = useState({
@@ -9,7 +9,6 @@ export const Contact = () => {
     subject: "",
     message: "",
   });
-
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -27,7 +26,7 @@ export const Contact = () => {
     emailjs
       .send("service_06bdodc", "template_lq9b4si", form, "QR4a7AmsZ_pM6gZ40")
       .then(() => {
-        setStatus("Mensaje enviado correctamente");
+        setStatus("Mensaje enviado correctamente.");
         setForm({ name: "", email: "", subject: "", message: "" });
         setSuccess(true);
       })
@@ -40,122 +39,110 @@ export const Contact = () => {
   };
 
   return (
-    <section
-      className="flex items-center justify-center min-h-screen bg-white dark:bg-gray-900"
-      id="Contacto"
-    >
-      <div className="py-8 lg:py-16 px-7 lg:px-4 mx-auto max-w-screen-md">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white flex items-center justify-center gap-2">
-          <FiPhone className="w-8 h-8 text-gray-500" /> {/* Icono de teléfono */}
-          Contacto
-        </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-          ¿Tienes alguna duda? Envia un correito y cuadramos una reunión
-        </p>
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <div>
-            <label
-              htmlFor="name"
-              className="block mb-2 text-sm dont-medium text-gray-900 dark:text-gray-300"
-            >
-              Tu Nombre
-            </label>
+    <section className="section" id="Contacto">
+      <div className="container contact-wrap">
+        <motion.div
+          className="section-head"
+          style={{ textAlign: "center" }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.55 }}
+        >
+          <p className="section-kicker" style={{ textAlign: "center" }}>
+            04 — Contacto
+          </p>
+          <h2 style={{ textAlign: "center" }}>Hablemos</h2>
+          <p style={{ marginInline: "auto", textAlign: "center" }}>
+            ¿Tienes una idea, una vacante o un proyecto con IA? Escríbeme y lo
+            vemos.
+          </p>
+        </motion.div>
+
+        <motion.form
+          className="card"
+          style={{ padding: "1.35rem" }}
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.55, delay: 0.05 }}
+        >
+          <label>
+            Nombre
             <input
+              className="field"
               type="text"
               name="name"
-              id="name"
               value={form.name}
               onChange={handleChange}
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primar-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="Naruto Uzumaki"
+              placeholder="Tu nombre"
               required
             />
-          </div>
-          <div>
-            <label
-              htmlFor="email"
-              className="block mb-2 text-sm dont-medium text-gray-900 dark:text-gray-300"
-            >
-              Tu correo electrónico
-            </label>
+          </label>
+          <label>
+            Correo
             <input
+              className="field"
               type="email"
               name="email"
-              id="email"
               value={form.email}
               onChange={handleChange}
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primar-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="ejemplo@mail.com"
+              placeholder="tu@email.com"
               required
             />
-          </div>
-          <div>
-            <label
-              htmlFor="subject"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              required
-            >
-              Asunto
-            </label>
+          </label>
+          <label>
+            Asunto
             <input
+              className="field"
               type="text"
               name="subject"
-              id="subject"
               value={form.subject}
               onChange={handleChange}
-              className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="Escribe el asunto acá"
+              placeholder="¿De qué se trata?"
               required
             />
-          </div>
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="message"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              Tu Mensaje
-            </label>
+          </label>
+          <label>
+            Mensaje
             <textarea
+              className="field"
               name="message"
               rows="6"
-              id="message"
               value={form.message}
               onChange={handleChange}
-              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-              placeholder="Deja tu comentario aquí..."
+              placeholder="Cuéntame un poco más..."
               required
-            ></textarea>
-          </div>
+            />
+          </label>
           <button
             type="submit"
+            className="btn btn-primary"
             disabled={loading}
-            className={`py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:gb-primary-700 dark:focus:ring-primary-800 border ${
-              loading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-500 hover:bg-blue-600"
-            }`}
+            style={{ opacity: loading ? 0.7 : 1 }}
           >
-            {loading ? "Enviando..." : "Enviar"}
+            {loading ? "Enviando..." : "Enviar mensaje"}
           </button>
-        </form>
 
-        {
-          //Mensaje Enviado
-          success && (
-            <div className="mt-4 p-3 bg-green-100 text-green-800 border border-green-300 rounded">
+          {status && (
+            <div
+              style={{
+                marginTop: "0.25rem",
+                padding: "0.85rem 1rem",
+                borderRadius: "0.85rem",
+                border: "1px solid var(--line)",
+                background: success
+                  ? "var(--accent-soft)"
+                  : "rgba(220, 38, 38, 0.08)",
+                color: "var(--ink)",
+                fontSize: "0.92rem",
+              }}
+            >
               {status}
             </div>
-          )
-        }
-
-        {
-          //Mensaje de Error
-          !success && status && (
-            <div className="mt-4 p-3 bg-red-100 text-red-800 border border-red-300 rounded">
-              {status}
-            </div>
-          )
-        }
+          )}
+        </motion.form>
       </div>
     </section>
   );

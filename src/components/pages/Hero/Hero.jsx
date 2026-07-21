@@ -1,63 +1,130 @@
-import whatsapp from "../../../assets/whatsapp.svg";
-import descargar from "../../../assets/descargar.svg";
-import github from "../../../assets/github.svg";
-import linkedin from "../../../assets/linkedin.svg";
+import { motion } from "framer-motion";
+import aiHeroBg from "../../../assets/ai-hero-bg.png";
 import hojaDeVida from "../../../assets/Hoja de Vida Actualizada - Jose Ahumada.pdf";
+import { profile } from "../../../data/portfolio";
+
 export const Hero = () => {
-  const linksitems = [
-    {
-      id: 1,
-      name: "Linkedin",
-      logo: linkedin,
-      link: "https://www.linkedin.com/in/jose-ahumada-navarro/",
-    },
-    {
-      id: 2,
-      name: "Github",
-      logo: github,
-      link: "https://github.com/Joseberseker",
-    },
-    {
-      id: 3,
-      name: "Hoja de Vida",
-      logo: descargar,
-      link: hojaDeVida,
-    },
-    {
-      id: 4,
-      name: "Contáctame",
-      logo: whatsapp,
-      link: "https://wa.me/+573007411393",
-    },
-  ];
   return (
-    <section
-      id="Inicio"
-      className="flex items-center justify-center md:pt-40 md:pb-80 lg:min-h-screen px-7"
-    >
-      <div className="p-6 bg-gray-100 flex items-center justify-center flex-col max-w-screen-lg h-[40%] mx-auto my-40">
-        <h1 className="text-3xl lg:text-5xl font-semibold mt-2">FullStack Developer</h1>
-        <p className="text-md lg:text-lg font-medium text-gray-500 mt-6">
-          Bienvenido a mi página web. Aquí encontrarás información sobre mis
-          proyectos, habilidades y experiencia en el desarrollo FullStack.
-          Descubre como utilizo tecnologías como HTML, CSS, JavaScript, React y Nodejs para crear soluciones innovadoras y eficientes.
-        </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6  md:flex-row gap-2 w-full">
-          {linksitems.map((linksitems) => {
-            const { id, name, link, logo } = linksitems
-            return (
-              <a
-                key={id}
-                className="flex flex-row  rounded-md bg-gray-600 px-3.5 py-2.5 w-full lg:w-39 justify-center text-sm font-semibold text-white hover:bg-gray-500"
-                href={link}
-                target="_blank"
-                {...(id === 3 ? { download: true } : {})}
+    <section id="Inicio" className="hero">
+      <div className="hero__bg" aria-hidden>
+        <img src={aiHeroBg} alt="" />
+      </div>
+
+      <div className="container hero__content">
+        <div className="hero__layout">
+          <div>
+            {profile.available && (
+              <motion.span
+                className="eyebrow"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <span className="hidden md:flex">{name} |</span>
-                <img className="w-5 lg:w-4 mx-2 fill-white lg:ml-2" src={logo} alt={name} />
+                <span className="pulse-dot" />
+                Disponible para trabajar
+              </motion.span>
+            )}
+
+            <motion.p
+              className="hero-greet"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+            >
+              {profile.greet}
+            </motion.p>
+
+            <motion.h1
+              className="display"
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              {profile.name}
+            </motion.h1>
+
+            <motion.p
+              className="hero__role"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.16 }}
+            >
+              {profile.role}
+            </motion.p>
+
+            <motion.p
+              className="hero__blurb"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.2 }}
+            >
+              {profile.blurb}
+            </motion.p>
+
+            <motion.div
+              className="stats"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.24 }}
+            >
+              {profile.stats.map((stat) => (
+                <div key={stat.label} className="stat">
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              className="hero__actions"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.28 }}
+            >
+              <a
+                className="btn btn-primary"
+                href={hojaDeVida}
+                download
+                target="_blank"
+                rel="noreferrer"
+              >
+                Descargar CV
               </a>
-            );
-          })}
+              <a className="btn btn-secondary" href="#Contacto">
+                Contáctame
+              </a>
+              <a
+                className="btn btn-secondary"
+                href={profile.links.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                className="btn btn-secondary"
+                href={profile.links.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+              >
+                WhatsApp
+              </a>
+            </motion.div>
+          </div>
+
+          <motion.aside
+            className="hero-panel"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.32 }}
+          >
+            <span className="hero-panel__label">Focus</span>
+            <h2 className="hero-panel__title">AI · Full Stack</h2>
+            <p className="hero-panel__text">
+              Interfaces modernas, backends confiables y experimentos con
+              inteligencia artificial para productos que se sientan vivos.
+            </p>
+          </motion.aside>
         </div>
       </div>
     </section>
