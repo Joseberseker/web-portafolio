@@ -15,8 +15,8 @@ export const TimeLine = () => {
           <p className="section-kicker">03 — Experiencia</p>
           <h2>Trayectoria</h2>
           <p>
-            Roles donde combiné datos, infraestructura y desarrollo — la base
-            para lo que viene con IA.
+            De datos y automatización a asistentes conversacionales en
+            producción con WhatsApp, RAG y cloud.
           </p>
         </motion.div>
         <CardTimeLine />

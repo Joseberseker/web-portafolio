@@ -13,11 +13,11 @@ export const AboutMe = () => {
         >
           <div className="section-head">
             <p className="section-kicker">02 — Sobre mí</p>
-            <h2>Perfil</h2>
+            <h2>Qué estoy construyendo</h2>
             <p>
-              Me especializo en experiencias web claras y backends prácticos.
-              Vengo de datos, DevOps y e-commerce; hoy empujo hacia productos
-              fullstack con inteligencia artificial aplicada.
+              En el trabajo manejo WhatsApp, webhooks e IA conversacional. En lo
+              personal quiero mi propio asistente: primero Telegram, después
+              WhatsApp, sin complicarlo de más.
             </p>
           </div>
           <div className="tech-marquee" aria-label="Stack de tecnologías">
@@ -40,7 +40,7 @@ export const AboutMe = () => {
               letterSpacing: "-0.02em",
             }}
           >
-            Tecnologías
+            Stack
           </h3>
           <div className="skills-grid">
             {skills.map((skill) => (

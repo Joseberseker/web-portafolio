@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import aiHeroBg from "../../../assets/ai-hero-bg.png";
-import hojaDeVida from "../../../assets/Hoja de Vida Actualizada - Jose Ahumada.pdf";
+import heroAssistant from "../../../assets/hero-assistant-hub.png";
+import hojaDeVida from "../../../assets/Jose_Ahumada_CV.pdf";
 import { profile } from "../../../data/portfolio";
 
 export const Hero = () => {
@@ -90,6 +91,14 @@ export const Hero = () => {
               >
                 Descargar CV
               </a>
+              <a
+                className="btn btn-secondary"
+                href={profile.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
               <a className="btn btn-secondary" href="#Contacto">
                 Contáctame
               </a>
@@ -113,17 +122,18 @@ export const Hero = () => {
           </div>
 
           <motion.aside
-            className="hero-panel"
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.32 }}
+            className="hero-float"
+            initial={{ opacity: 0, scale: 0.92, y: 18 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.28 }}
           >
-            <span className="hero-panel__label">Focus</span>
-            <h2 className="hero-panel__title">AI · Full Stack</h2>
-            <p className="hero-panel__text">
-              Interfaces modernas, backends confiables y experimentos con
-              inteligencia artificial para productos que se sientan vivos.
-            </p>
+            <div className="hero-float__glow" />
+            <img
+              className="hero-float__img"
+              src={heroAssistant}
+              alt="Asistente virtual con chat e integraciones"
+            />
+            <p className="hero-float__caption">Asistente virtual · Chat IA</p>
           </motion.aside>
         </div>
       </div>

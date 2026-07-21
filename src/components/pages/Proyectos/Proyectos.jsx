@@ -13,10 +13,10 @@ export const Proyectos = () => {
           transition={{ duration: 0.5 }}
         >
           <p className="section-kicker">01 — Proyectos</p>
-          <h2>Trabajo seleccionado</h2>
+          <h2>Mi roadmap</h2>
           <p>
-            Demos publicadas que muestran interfaces, lógica y despliegue. La
-            base para construir productos más ambiciosos con IA.
+            Arranco simple: asistente en Telegram, luego WhatsApp y un panel
+            básico. Vamos construyendo uno a uno.
           </p>
         </motion.div>
         <div className="project-grid">

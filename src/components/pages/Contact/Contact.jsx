@@ -54,8 +54,8 @@ export const Contact = () => {
           </p>
           <h2 style={{ textAlign: "center" }}>Hablemos</h2>
           <p style={{ marginInline: "auto", textAlign: "center" }}>
-            ¿Tienes una idea, una vacante o un proyecto con IA? Escríbeme y lo
-            vemos.
+            ¿Quieres un asistente virtual, automatizar WhatsApp/Telegram o
+            hablar de una vacante? Escríbeme y lo vemos.
           </p>
         </motion.div>
 
