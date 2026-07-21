@@ -3,7 +3,7 @@ import { CardTimeLine } from "../../layouts/CardTimeLine/CardTimeLine";
 
 export const TimeLine = () => {
   return (
-    <section className="section section--screen" id="Experiencia">
+    <section className="section" id="Experiencia">
       <div className="container container--narrow">
         <motion.div
           className="section-head"

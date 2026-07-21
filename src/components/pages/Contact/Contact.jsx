@@ -39,59 +39,60 @@ export const Contact = () => {
   };
 
   return (
-    <section className="section section--screen section--contact" id="Contacto">
+    <section className="section section--contact" id="Contacto">
       <div className="contact-wrap">
         <motion.div
           className="section-head"
           style={{ textAlign: "center" }}
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.55 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <p className="section-kicker" style={{ textAlign: "center" }}>
             04 — Contacto
           </p>
           <h2 style={{ textAlign: "center" }}>Hablemos</h2>
           <p style={{ marginInline: "auto", textAlign: "center" }}>
-            ¿Quieres un asistente virtual, automatizar WhatsApp/Telegram o
-            hablar de una vacante? Escríbeme y lo vemos.
+            ¿Asistente virtual, automatizar WhatsApp/Telegram o una vacante?
+            Escríbeme.
           </p>
         </motion.div>
 
         <motion.form
           className="card"
-          style={{ padding: "1.35rem" }}
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.55, delay: 0.05 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.4, delay: 0.04 }}
         >
-          <label>
-            Nombre
-            <input
-              className="field"
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Tu nombre"
-              required
-            />
-          </label>
-          <label>
-            Correo
-            <input
-              className="field"
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="tu@email.com"
-              required
-            />
-          </label>
+          <div className="contact-form-row">
+            <label>
+              Nombre
+              <input
+                className="field"
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Tu nombre"
+                required
+              />
+            </label>
+            <label>
+              Correo
+              <input
+                className="field"
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="tu@email.com"
+                required
+              />
+            </label>
+          </div>
           <label>
             Asunto
             <input
@@ -109,7 +110,7 @@ export const Contact = () => {
             <textarea
               className="field"
               name="message"
-              rows="6"
+              rows="4"
               value={form.message}
               onChange={handleChange}
               placeholder="Cuéntame un poco más..."
@@ -128,15 +129,15 @@ export const Contact = () => {
           {status && (
             <div
               style={{
-                marginTop: "0.25rem",
-                padding: "0.85rem 1rem",
-                borderRadius: "0.85rem",
+                marginTop: "0.15rem",
+                padding: "0.7rem 0.9rem",
+                borderRadius: "0.75rem",
                 border: "1px solid var(--line)",
                 background: success
                   ? "var(--accent-soft)"
                   : "rgba(220, 38, 38, 0.08)",
                 color: "var(--ink)",
-                fontSize: "0.92rem",
+                fontSize: "0.9rem",
               }}
             >
               {status}

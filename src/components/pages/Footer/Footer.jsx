@@ -17,7 +17,6 @@ export const Footer = () => {
           <a href={profile.links.whatsapp} target="_blank" rel="noreferrer">
             WhatsApp
           </a>
-          <a href={`mailto:${profile.email}`}>{profile.email}</a>
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import { skills, techTags } from "../../../data/portfolio";
 
 export const AboutMe = () => {
   return (
-    <section className="section section--screen" id="Sobre Mí">
+    <section className="section section--fill" id="Sobre Mí">
       <div className="container about-grid">
         <motion.div
           initial={{ opacity: 0, y: 14 }}
