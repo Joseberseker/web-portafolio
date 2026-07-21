@@ -15,8 +15,8 @@ export const Proyectos = () => {
           <p className="section-kicker">01 — Proyectos</p>
           <h2>Mi roadmap</h2>
           <p>
-            Arranco simple: asistente en Telegram, luego WhatsApp y un panel
-            básico. Vamos construyendo uno a uno.
+            Dos asistentes (Telegram → WhatsApp) y dos proyectos fullstack para
+            practicar APIs, dashboards y producto web.
           </p>
         </motion.div>
         <div className="project-grid">

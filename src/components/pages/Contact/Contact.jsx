@@ -39,8 +39,8 @@ export const Contact = () => {
   };
 
   return (
-    <section className="section" id="Contacto">
-      <div className="container contact-wrap">
+    <section className="section section--screen section--contact" id="Contacto">
+      <div className="contact-wrap">
         <motion.div
           className="section-head"
           style={{ textAlign: "center" }}
