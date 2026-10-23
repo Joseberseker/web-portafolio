@@ -1,4 +1,3 @@
-import grabadorIaImg from "../assets/grabador-ia-biblioteca.png";
 import ragFaqTelegramImg from "../assets/rag-faq-telegram-widget.png";
 
 export const profile = {
@@ -71,7 +70,6 @@ export const projects = [
     desc: "Extensión de Chrome que graba pantalla, pestaña o ventana, convierte a MP4 en el propio equipo y transcribe el audio con Whisper local: sin backend ni subida de vídeo.",
     accent: "#2dd4bf",
     icon: "bx bx-camera-movie",
-    image: grabadorIaImg,
     link: "https://github.com/Joseberseker/grabador-ia",
   },
   {
