@@ -1,3 +1,6 @@
+import grabadorIaImg from "../assets/grabador-ia-biblioteca.png";
+import ragFaqTelegramImg from "../assets/rag-faq-telegram-widget.png";
+
 export const profile = {
   name: "Jose Ahumada",
   fullName: "Jose Luis Ahumada Navarro",
@@ -22,11 +25,11 @@ export const profile = {
 };
 
 export const navItems = [
-  { id: "Inicio", label: "Inicio" },
-  { id: "Mis Proyectos", label: "Proyectos" },
-  { id: "Sobre Mí", label: "Sobre mí" },
-  { id: "Experiencia", label: "Experiencia" },
-  { id: "Contacto", label: "Contacto" },
+  { id: "inicio", label: "Inicio" },
+  { id: "mis-proyectos", label: "Proyectos" },
+  { id: "sobre-mi", label: "Sobre mí" },
+  { id: "experiencia", label: "Experiencia" },
+  { id: "contacto", label: "Contacto" },
 ];
 
 export const skills = [
@@ -61,13 +64,26 @@ export const techTags = [
 
 export const projects = [
   {
+    id: 0,
+    name: "Grabador de Pantalla con IA",
+    status: "Publicado",
+    stack: ["JavaScript", "Chrome Extension", "WebCodecs", "Whisper"],
+    desc: "Extensión de Chrome que graba pantalla, pestaña o ventana, convierte a MP4 en el propio equipo y transcribe el audio con Whisper local: sin backend ni subida de vídeo.",
+    accent: "#2dd4bf",
+    icon: "bx bx-camera-movie",
+    image: grabadorIaImg,
+    link: "https://github.com/Joseberseker/grabador-ia",
+  },
+  {
     id: 1,
-    name: "Asistente en Telegram",
-    status: "En desarrollo",
-    stack: ["Python", "Telegram Bot API", "LLM"],
-    desc: "Asistente personal en Telegram para chat, recordatorios y tareas simples del día a día.",
+    name: "Asistente FAQ con RAG (Telegram + Web)",
+    status: "Publicado",
+    stack: ["Python", "Ollama", "RAG", "Telegram Bot API", "Docker"],
+    desc: "Asistente de soporte 100% local (Ollama + Chroma, sin APIs pagas) para un e-commerce: responde por Telegram y por un widget de chat embebible, siempre citando la fuente y con guardrail anti-alucinación.",
     accent: "#2dd4bf",
     icon: "bx bxl-telegram",
+    image: ragFaqTelegramImg,
+    link: "https://github.com/Joseberseker/rag-faq-telegram",
   },
   {
     id: 2,
