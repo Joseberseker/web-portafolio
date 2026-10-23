@@ -14,7 +14,7 @@ export const profile = {
   phone: "+57 300 423 7458",
   stats: [
     { value: "1+", label: "Años con IA aplicada" },
-    { value: "4", label: "Proyectos en roadmap" },
+    { value: "2", label: "Proyectos publicados" },
     { value: "Telegram", label: "Canal inicial" },
   ],
   links: {
@@ -84,33 +84,6 @@ export const projects = [
     icon: "bx bxl-telegram",
     image: ragFaqTelegramImg,
     link: "https://github.com/Joseberseker/rag-faq-telegram",
-  },
-  {
-    id: 2,
-    name: "Asistente en WhatsApp",
-    status: "Siguiente paso",
-    stack: ["WhatsApp API", "Webhooks", "NestJS"],
-    desc: "Migrar el asistente a WhatsApp cuando Telegram esté estable.",
-    accent: "#25D366",
-    icon: "bx bxl-whatsapp",
-  },
-  {
-    id: 3,
-    name: "API FullStack de tareas",
-    status: "Por construir",
-    stack: ["React", "Node.js", "PostgreSQL"],
-    desc: "App web con auth, CRUD y API REST para practicar un flujo fullstack completo.",
-    accent: "#60a5fa",
-    icon: "bx bx-data",
-  },
-  {
-    id: 4,
-    name: "Dashboard operativo",
-    status: "Por construir",
-    stack: ["React", "TypeScript", "Charts"],
-    desc: "Panel para ver métricas, tickets o estados — útil y visual para portafolio fullstack.",
-    accent: "#f59e0b",
-    icon: "bx bx-bar-chart-alt-2",
   },
 ];
 
