@@ -13,13 +13,20 @@ export const ProjectCard = () => {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.5, delay: index * 0.06 }}
         >
-          <div
-            className="project-card__media project-card__media--lab"
-            style={{ "--lab-accent": project.accent }}
-          >
-            <i className={project.icon} aria-hidden />
-            <span className="project-card__status">{project.status}</span>
-          </div>
+          {project.image ? (
+            <div className="project-card__media">
+              <img src={project.image} alt={`Captura de ${project.name}`} />
+              <span className="project-card__status">{project.status}</span>
+            </div>
+          ) : (
+            <div
+              className="project-card__media project-card__media--lab"
+              style={{ "--lab-accent": project.accent }}
+            >
+              <i className={project.icon} aria-hidden />
+              <span className="project-card__status">{project.status}</span>
+            </div>
+          )}
           <div className="project-card__body">
             <h3>{project.name}</h3>
             <p>{project.desc}</p>
@@ -28,9 +35,21 @@ export const ProjectCard = () => {
                 <span key={tech}>{tech}</span>
               ))}
             </div>
-            <p className="project-card__note">
-              Roadmap · lo vamos armando poco a poco
-            </p>
+            {project.link ? (
+              <a
+                className="project-card__link"
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver repositorio <i className="bx bx-link-external" aria-hidden />
+                <span className="sr-only"> (abre en una pestaña nueva)</span>
+              </a>
+            ) : (
+              <p className="project-card__note">
+                Roadmap · lo vamos armando poco a poco
+              </p>
+            )}
           </div>
         </motion.article>
       ))}
