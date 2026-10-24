@@ -20,7 +20,7 @@ export const Proyectos = () => {
             producto web.
           </p>
         </motion.div>
-        <div className="project-grid">
+        <div className="project-showcase-list">
           <ProjectCard />
         </div>
       </div>
