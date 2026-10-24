@@ -3,7 +3,7 @@ import { ProjectCard } from "../../layouts/ProjectCard/ProjectCard";
 
 export const Proyectos = () => {
   return (
-    <section className="section" id="Mis Proyectos">
+    <section className="section" id="mis-proyectos">
       <div className="container">
         <motion.div
           className="section-head"
@@ -13,10 +13,11 @@ export const Proyectos = () => {
           transition={{ duration: 0.5 }}
         >
           <p className="section-kicker">01 — Proyectos</p>
-          <h2>Mi roadmap</h2>
+          <h2>Proyectos y roadmap</h2>
           <p>
-            Dos asistentes (Telegram → WhatsApp) y dos proyectos fullstack para
-            practicar APIs, dashboards y producto web.
+            Un proyecto ya publicado, dos asistentes (Telegram → WhatsApp) y
+            dos proyectos fullstack para practicar APIs, dashboards y
+            producto web.
           </p>
         </motion.div>
         <div className="project-grid">

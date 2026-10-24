@@ -1,3 +1,4 @@
+import { MotionConfig } from "framer-motion";
 import { AboutMe } from "./components/pages/AboutMe/AboutMe";
 import { Contact } from "./components/pages/Contact/Contact";
 import { Footer } from "./components/pages/Footer/Footer";
@@ -9,24 +10,26 @@ import { navItems } from "./data/portfolio";
 
 function App() {
   return (
-    <div className="page">
-      <Header />
-      <nav className="side-nav" aria-label="Secciones">
-        {navItems.map((item) => (
-          <a key={item.id} href={`#${item.id}`} title={item.label}>
-            {item.label}
-          </a>
-        ))}
-      </nav>
-      <main>
-        <Hero />
-        <Proyectos />
-        <AboutMe />
-        <TimeLine />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="page">
+        <Header />
+        <nav className="side-nav" aria-label="Secciones">
+          {navItems.map((item) => (
+            <a key={item.id} href={`#${item.id}`} title={item.label}>
+              <span className="sr-only">{item.label}</span>
+            </a>
+          ))}
+        </nav>
+        <main>
+          <Hero />
+          <Proyectos />
+          <AboutMe />
+          <TimeLine />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </MotionConfig>
   );
 }
 
