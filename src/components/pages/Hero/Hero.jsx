@@ -6,7 +6,7 @@ import { profile } from "../../../data/portfolio";
 
 export const Hero = () => {
   return (
-    <section id="Inicio" className="hero">
+    <section id="inicio" className="hero">
       <div className="hero__bg" aria-hidden>
         <img src={aiHeroBg} alt="" />
       </div>
@@ -90,6 +90,7 @@ export const Hero = () => {
                 rel="noreferrer"
               >
                 Descargar CV
+                <span className="sr-only"> (abre en una pestaña nueva)</span>
               </a>
               <a
                 className="btn btn-secondary"
@@ -98,8 +99,9 @@ export const Hero = () => {
                 rel="noreferrer"
               >
                 LinkedIn
+                <span className="sr-only"> (abre en una pestaña nueva)</span>
               </a>
-              <a className="btn btn-secondary" href="#Contacto">
+              <a className="btn btn-secondary" href="#contacto">
                 Contáctame
               </a>
               <a
@@ -109,6 +111,7 @@ export const Hero = () => {
                 rel="noreferrer"
               >
                 GitHub
+                <span className="sr-only"> (abre en una pestaña nueva)</span>
               </a>
               <a
                 className="btn btn-secondary"
@@ -117,11 +120,12 @@ export const Hero = () => {
                 rel="noreferrer"
               >
                 WhatsApp
+                <span className="sr-only"> (abre en una pestaña nueva)</span>
               </a>
             </motion.div>
           </div>
 
-          <motion.aside
+          <motion.div
             className="hero-float"
             initial={{ opacity: 0, scale: 0.92, y: 18 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -134,7 +138,7 @@ export const Hero = () => {
               alt="Asistente virtual con chat e integraciones"
             />
             <p className="hero-float__caption">Asistente virtual · Chat IA</p>
-          </motion.aside>
+          </motion.div>
         </div>
       </div>
     </section>

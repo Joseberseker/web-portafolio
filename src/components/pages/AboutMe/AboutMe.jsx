@@ -3,7 +3,7 @@ import { skills, techTags } from "../../../data/portfolio";
 
 export const AboutMe = () => {
   return (
-    <section className="section section--fill" id="Sobre Mí">
+    <section className="section section--fill" id="sobre-mi">
       <div className="container about-grid">
         <motion.div
           initial={{ opacity: 0, y: 14 }}
@@ -20,11 +20,11 @@ export const AboutMe = () => {
               WhatsApp, sin complicarlo de más.
             </p>
           </div>
-          <div className="tech-marquee" aria-label="Stack de tecnologías">
+          <ul className="tech-marquee" aria-label="Stack de tecnologías">
             {techTags.map((tag) => (
-              <span key={tag}>{tag}</span>
+              <li key={tag}>{tag}</li>
             ))}
-          </div>
+          </ul>
         </motion.div>
 
         <motion.div
