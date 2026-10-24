@@ -39,7 +39,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="section section--contact" id="Contacto">
+    <section className="section section--contact" id="contacto">
       <div className="contact-wrap">
         <motion.div
           className="section-head"
@@ -128,6 +128,8 @@ export const Contact = () => {
 
           {status && (
             <div
+              role={success ? "status" : "alert"}
+              aria-live={success ? "polite" : "assertive"}
               style={{
                 marginTop: "0.15rem",
                 padding: "0.7rem 0.9rem",

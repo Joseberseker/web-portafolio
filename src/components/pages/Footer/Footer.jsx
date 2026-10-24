@@ -10,12 +10,15 @@ export const Footer = () => {
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.85rem" }}>
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
+            <span className="sr-only"> (abre en una pestaña nueva)</span>
           </a>
           <a href={profile.links.github} target="_blank" rel="noreferrer">
             GitHub
+            <span className="sr-only"> (abre en una pestaña nueva)</span>
           </a>
           <a href={profile.links.whatsapp} target="_blank" rel="noreferrer">
             WhatsApp
+            <span className="sr-only"> (abre en una pestaña nueva)</span>
           </a>
         </div>
       </div>
