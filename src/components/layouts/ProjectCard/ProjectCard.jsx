@@ -7,32 +7,27 @@ export const ProjectCard = () => {
       {projects.map((project, index) => (
         <motion.article
           key={project.id}
-          className={`card project-showcase${
-            index % 2 === 1 ? " project-showcase--reverse" : ""
-          }`}
-          initial={{ opacity: 0, y: 24 }}
+          className="card project-card"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.55, delay: index * 0.08 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.5, delay: index * 0.06 }}
         >
-          <div className="project-showcase__media">
-            {project.image ? (
+          {project.image ? (
+            <div className="project-card__media">
               <img src={project.image} alt={`Captura de ${project.name}`} />
-            ) : (
-              <div
-                className="project-showcase__media-fallback"
-                style={{ "--lab-accent": project.accent }}
-              >
-                <i className={project.icon} aria-hidden />
-              </div>
-            )}
-            <span className="project-showcase__status">{project.status}</span>
-          </div>
-
-          <div className="project-showcase__body">
-            <span className="project-showcase__index">
-              {String(index + 1).padStart(2, "0")}
-            </span>
+              <span className="project-card__status">{project.status}</span>
+            </div>
+          ) : (
+            <div
+              className="project-card__media project-card__media--lab"
+              style={{ "--lab-accent": project.accent }}
+            >
+              <i className={project.icon} aria-hidden />
+              <span className="project-card__status">{project.status}</span>
+            </div>
+          )}
+          <div className="project-card__body">
             <h3>{project.name}</h3>
             <p>{project.desc}</p>
             <div className="stack">
@@ -42,7 +37,7 @@ export const ProjectCard = () => {
             </div>
             {project.link ? (
               <a
-                className="btn btn-secondary project-showcase__link"
+                className="project-card__link"
                 href={project.link}
                 target="_blank"
                 rel="noreferrer"
